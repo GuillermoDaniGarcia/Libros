@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
+
 import { useEffect, useState } from "react";
 
 export default function Libro(props) {
   const { id } = props;
   const [libro, setLibro] = useState();
+
   const getLibro = async () => {
     fetch("https://gutendex.com/books/" + id + "/")
       .then((response) => response.json())
@@ -63,6 +65,9 @@ export default function Libro(props) {
       </div>
     </main>
   ) : (
-    <></>
+    <>
+      {" "}
+      <div className="loader"></div>
+    </>
   );
 }

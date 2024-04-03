@@ -1,19 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: aliceblue;
-  background-color: rgba(0, 0, 0, 0.712);
+  color: black;
   font-family: 'Rubik', sans-serif;
 }
 
 .App{
   min-height: 100vh;
+  background-color: rgba(175, 166, 166, 0.541);
+
 }
 
 main{
@@ -37,13 +35,12 @@ main{
 
 .libro{
   display: flex;
-  border-radius: 1rem;
   padding-block: 1rem;
   width: 49%;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
+  background-color: whitesmoke;
   justify-content: center;
+  border-radius: 1rem;
+  border: 2px black solid;
 }
 
 .lenguajes{
@@ -73,14 +70,37 @@ header{
   padding-top: 40px;
 }
 
+.input-wrapper {
+  position: relative;
+  width: 271px;
+  margin-top: 2rem;
+}
+
 input{
   z-index: 100;
   left: 700px;
   top: 2rem;
-  max-width: 400px;
-  width: 100%;
-  height: 25px;
+  height: 40px;
+  border-radius: 1rem;
 }
+
+.input {
+  box-sizing: border-box;
+  color: #191919;
+  padding: 15px 15px 15px 35px;
+  width: 300px;
+}
+
+.input-icon {
+  color: #191919;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 .loader{
   position: fixed;
@@ -117,4 +137,81 @@ input{
   to{
     transform: rotate(1turn);
   }
+}
+
+.close:hover{
+  cursor: pointer;
+}
+
+.orden{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2rem;
+  margin-right: 13rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: .5rem;
+  max-width: 150px;
+  width: 100%;
+}
+
+.orden:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+.favoritos{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2rem;
+  margin-right: 3rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: .5rem;
+  max-width: 150px;
+  width: 100%;
+}
+
+.favoritos:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+.img_favs{
+  border: none;
+}
+
+.img_favs:hover{
+  cursor: pointer;
+}
+
+.imagenes{
+  width: 2rem;
+  height: 2rem;
+  max-width: 100%;
+}
+
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 50%;
+  padding: 5px;
+}
+.popup-arrow {
+  color: rgb(255, 255, 255);
+}
+[role='tooltip'].popup-content {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup='tooltip'].popup-overlay {
+  background: transparent;
 }
