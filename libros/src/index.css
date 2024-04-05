@@ -41,14 +41,17 @@ main{
   justify-content: center;
   border-radius: 1rem;
   border: 2px black solid;
-}
-
-.lenguajes{
-  padding-top: 2rem;
+  height: 310px;
+  max-height: 100%;
 }
 
 .titulo{
   width: 400px;
+  padding: 1rem;
+}
+
+.lenguajes{
+  padding-top: 2rem;
 }
 
 .tipos{
@@ -57,6 +60,7 @@ main{
 
 .imagen{
   display: flex;
+  flex-direction: column;
   padding-inline: 1rem;
   justify-content: center;
   height: 230px;
@@ -77,9 +81,6 @@ header{
 }
 
 input{
-  z-index: 100;
-  left: 700px;
-  top: 2rem;
   height: 40px;
   border-radius: 1rem;
 }
@@ -101,6 +102,168 @@ input{
   transform: translateY(-50%);
 }
 
+.mostrar-original{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2.5rem;
+  margin-right: 23rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: .5rem;
+  max-width: 150px;
+  width: 100%;
+}
+
+.mostrar-original:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+.orden{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2.5rem;
+  margin-right: 13rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: .5rem;
+  max-width: 150px;
+  width: 100%;
+}
+
+.orden:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+.favoritos{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2.5rem;
+  margin-right: 3rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: .5rem;
+  max-width: 150px;
+  width: 100%;
+}
+
+.favoritos:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+.ver-datos{
+  position: relative;
+  right: 10rem;
+  top: 15rem;
+  width: 4.5rem;
+  border: #191919 2px solid;
+  background-color: whitesmoke;
+  padding: .5rem;
+  border-radius: 1rem;
+  font-size: .7rem;
+}
+
+.ver-datos:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+.download{
+  position: relative;
+  right: 10rem;
+  top: 15rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.download:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.imagenes{
+  position: relative;
+  right: 10rem;
+  top: 15.1rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  max-width: 100%;
+}
+
+.img_favs{
+  border: none;
+}
+
+.img_favs:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button-paginacion{
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-paginacion[disabled]{
+  background-color: rgb(190, 190, 190);
+  cursor: no-drop;
+}
+
+.img-paginacion{
+  width: 10px;
+}
+
+.input-paginacion{
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 50%;
+  padding: 5px;
+}
+.popup-arrow {
+  color: rgb(255, 255, 255);
+}
+[role='tooltip'].popup-content {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup='tooltip'].popup-overlay {
+  background: transparent;
+}
 
 .loader{
   position: fixed;
@@ -141,77 +304,4 @@ input{
 
 .close:hover{
   cursor: pointer;
-}
-
-.orden{
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 2rem;
-  margin-right: 13rem;
-  background-color: whitesmoke;
-  border-radius: 1rem;
-  padding: .5rem;
-  max-width: 150px;
-  width: 100%;
-}
-
-.orden:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
-}
-
-.favoritos{
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 2rem;
-  margin-right: 3rem;
-  background-color: whitesmoke;
-  border-radius: 1rem;
-  padding: .5rem;
-  max-width: 150px;
-  width: 100%;
-}
-
-.favoritos:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
-}
-
-.img_favs{
-  border: none;
-}
-
-.img_favs:hover{
-  cursor: pointer;
-}
-
-.imagenes{
-  width: 2rem;
-  height: 2rem;
-  max-width: 100%;
-}
-
-.popup-content {
-  margin: auto;
-  background: rgb(255, 255, 255);
-  width: 50%;
-  padding: 5px;
-}
-.popup-arrow {
-  color: rgb(255, 255, 255);
-}
-[role='tooltip'].popup-content {
-  width: 200px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
-}
-
-.popup-overlay {
-  background: rgba(0, 0, 0, 0.5);
-}
-[data-popup='tooltip'].popup-overlay {
-  background: transparent;
 }

@@ -6,8 +6,11 @@ import { useEffect, useState } from "react";
 
 export default function Libro(props) {
   const { id } = props;
+
+  //Creamos el estado del pop-up, que será donde estarán almacenados cada libro
   const [libro, setLibro] = useState();
 
+  //Nos pilla la imagen de cada libro
   const getLibro = async () => {
     fetch("https://gutendex.com/books/" + id + "/")
       .then((response) => response.json())
@@ -15,11 +18,14 @@ export default function Libro(props) {
         setLibro(Libro);
       });
   };
+
+  // Nos detecta la id del libro en el que hagamos click para poder así identificar la información que salta en el pop-up
   useEffect(() => {
     if (id != 0) {
       getLibro();
     }
   }, [id]);
+
   return libro ? (
     <main>
       <div className="pop-up">
