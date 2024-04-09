@@ -77,39 +77,47 @@ export default function CajaLibro(props) {
           })}
         </div>
       </div>
-
-      <div className="imagen">
-        <img
-          src={libro.formats["image/jpeg"]}
-          width="150px"
-          alt={libro.title}
-        ></img>
+      <div className="todo-imagen">
+        <div className="imagen">
+          <img
+            src={libro.formats["image/jpeg"]}
+            width="150px"
+            height="230px"
+            alt={libro.title}
+          ></img>
+        </div>
+        <div className="debajo-imagen">
+          <div className="botoncitos">
+            <button
+              className="ver-datos"
+              onClick={() => {
+                guardadoId(libro.id);
+                // Abre el pop-up
+                setOpen((o) => !o);
+              }}
+            >
+              Ver datos
+            </button>
+          </div>
+          <a href={libro.formats["application/octet-stream"]} target="_blank">
+            <img
+              className="download"
+              src="/img/download.png"
+              alt="download"
+            ></img>
+          </a>
+          <img
+            className="imagenes img_favs"
+            // Si es favorito pon una imagen y si no lo es pon otra
+            src={isFav ? "/img/heart.png" : "/img/favourite.png"}
+            alt="Favourite"
+            onClick={() => {
+              //Llamamos al método que nos detecta si el libro es favorito o no
+              marcarFav();
+            }}
+          ></img>
+        </div>
       </div>
-      <div>
-        <button
-          className="ver-datos"
-          onClick={() => {
-            guardadoId(libro.id);
-            // Abre el pop-up
-            setOpen((o) => !o);
-          }}
-        >
-          Ver datos
-        </button>
-      </div>
-      <a href={libro.formats["application/octet-stream"]} target="_blank">
-        <img className="download" src="/img/download.png" alt="download"></img>
-      </a>
-      <img
-        className="imagenes img_favs"
-        // Si es favorito pon una imagen y si no lo es pon otra
-        src={isFav ? "/img/heart.png" : "/img/favourite.png"}
-        alt="Favourite"
-        onClick={() => {
-          //Llamamos al método que nos detecta si el libro es favorito o no
-          marcarFav();
-        }}
-      ></img>
     </div>
   );
 }

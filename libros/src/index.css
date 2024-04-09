@@ -4,14 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: black;
   font-family: 'Rubik', sans-serif;
 }
 
 .App{
   min-height: 100vh;
-  background-color: rgba(175, 166, 166, 0.541);
-
+  background-color: #A1CCA5;
+  padding-bottom: 16px;
+  padding-top: 30px;
 }
 
 main{
@@ -30,19 +30,15 @@ main{
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 5rem;
 }
 
 .libro{
   display: flex;
   padding-block: 1rem;
   width: 49%;
-  background-color: whitesmoke;
-  justify-content: center;
+  background-color: #8FB996;
+  justify-content: space-evenly;
   border-radius: 1rem;
-  border: 2px black solid;
-  height: 310px;
-  max-height: 100%;
 }
 
 .titulo{
@@ -58,26 +54,16 @@ main{
   padding-top: 4rem;
 }
 
-.imagen{
-  display: flex;
-  flex-direction: column;
-  padding-inline: 1rem;
-  justify-content: center;
-  height: 230px;
-}
-
 header{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 40px;
+  height: 150px;
   align-items: center;
-  padding-top: 40px;
 }
 
 .input-wrapper {
   position: relative;
-  width: 271px;
-  margin-top: 2rem;
 }
 
 input{
@@ -87,32 +73,35 @@ input{
 
 .input {
   box-sizing: border-box;
-  color: #191919;
   padding: 15px 15px 15px 35px;
   width: 300px;
 }
 
 .input-icon {
-  color: #191919;
   position: absolute;
   width: 20px;
-  height: 20px;
-  left: 12px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
 
+.num-pags{
+  padding-top: 5px;
+  text-align: center;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .mostrar-original{
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 2.5rem;
-  margin-right: 23rem;
   background-color: whitesmoke;
   border-radius: 1rem;
   padding: .5rem;
-  max-width: 150px;
-  width: 100%;
+  width: 150px
 }
 
 .mostrar-original:hover{
@@ -122,35 +111,23 @@ input{
 }
 
 .orden{
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 2.5rem;
-  margin-right: 13rem;
   background-color: whitesmoke;
   border-radius: 1rem;
   padding: .5rem;
-  max-width: 150px;
-  width: 100%;
+  width: 150px
 }
 
 .orden:hover{
   cursor: pointer;
   transform: scale(1.1);
-    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
 }
 
 .favoritos{
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 2.5rem;
-  margin-right: 3rem;
   background-color: whitesmoke;
   border-radius: 1rem;
   padding: .5rem;
-  max-width: 150px;
-  width: 100%;
+  width: 150px
 }
 
 .favoritos:hover{
@@ -159,16 +136,23 @@ input{
   box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
 }
 
+.imagen{
+  height: 240px;
+  max-height: 240px;
+}
+
+.debajo-imagen{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
 .ver-datos{
-  position: relative;
-  right: 10rem;
-  top: 15rem;
   width: 4.5rem;
-  border: #191919 2px solid;
-  background-color: whitesmoke;
   padding: .5rem;
   border-radius: 1rem;
   font-size: .7rem;
+  background-color: whitesmoke;
 }
 
 .ver-datos:hover{
@@ -178,9 +162,6 @@ input{
 }
 
 .download{
-  position: relative;
-  right: 10rem;
-  top: 15rem;
   width: 2rem;
   height: 2rem;
 }
@@ -191,9 +172,6 @@ input{
 }
 
 .imagenes{
-  position: relative;
-  right: 10rem;
-  top: 15.1rem;
   width: 1.7rem;
   height: 1.7rem;
   max-width: 100%;
@@ -216,7 +194,6 @@ input{
 }
 
 .button-paginacion{
-  background-color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
@@ -241,12 +218,34 @@ input{
   height: 30px;
   text-align: center;
   border: 1px solid black;
+  color: black;
   border-radius: 3px;
+}
+
+
+.pop-up{
+  text-align: center;
+}
+
+.p-about{
+  padding-bottom: 1rem;
+}
+
+.p-titulo{
+  padding-bottom: 1rem;
+}
+
+.p-autores{
+  padding-bottom: 1rem;
+}
+
+.p-subjects{
+  padding-bottom: 1rem;
 }
 
 .popup-content {
   margin: auto;
-  background: rgb(255, 255, 255);
+  background: #709775;
   width: 50%;
   padding: 5px;
 }

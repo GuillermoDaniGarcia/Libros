@@ -29,39 +29,35 @@ export default function Libro(props) {
   return libro ? (
     <main>
       <div className="pop-up">
-        <p className="p-about">About the book:</p>
+        <p className="p-about">
+          <b>About the book:</b>
+        </p>
         <p className="p-titulo">
-          Title:
-          {libro.title}
+          <u>Title</u>:{" " + libro.title}
         </p>
         <p className="p-autores">
           {libro.authors.map((authors) => {
             return (
               <p>
-                Author/s:{" "}
+                <u>Author/s</u>:{" "}
                 {`${authors.name} (${authors.birth_year}-${authors.death_year})`}
               </p>
             );
           })}
         </p>
         <p className="p-subjects">
-          Subjects:
+          <u>Subjects</u>:
           {libro.subjects.map((subjects) => {
             return <p className="p-subjects-list">{subjects}</p>;
           })}
         </p>
         <p id="p-librerias">
-          Bookshelves:
+          <u>Bookshelves</u>:
           {libro.bookshelves.map((bookshelves) => {
             return <p className="p-librerias-list">{bookshelves}</p>;
           })}
         </p>
-        <p id="lenguajes">
-          {libro.languages.map((languages) => {
-            return <p>Language/s: {languages}</p>;
-          })}
-        </p>
-        <p id="imagen">
+        <p id="p-imagen">
           <img
             src={libro.formats["image/jpeg"]}
             width="150px"
