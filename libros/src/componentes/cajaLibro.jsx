@@ -5,7 +5,7 @@
 import { useEffect, useState } from "react";
 export default function CajaLibro(props) {
   // Importamos las variables que necesitamos
-  const { libro, guardadoId, setOpen, pagina, setPagina, maximo } = props;
+  const { libro, guardadoId, setOpen } = props;
 
   // Creamos un estado para saber si el libro es favorito o no
   const [isFav, setIsFav] = useState(false);
